@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Performance — ECo'Campus Saint-Pol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <h1>🌱 Dashboard Performance — ECo'Campus Saint-Pol by Eco'Lodges</h1>
+    </header>
+
+    <main>
+        <section class="synthese">
+            <h2>Synthèse 2025 — ECo’Campus Saint-Pol</h2>
+            <div class="synthese-kpis">
+                <div>🏠 88 % taux d’occupation</div>
+                <div>💶 142 000 € revenus</div>
+                <div>⚡ 18 500 kWh économisés</div>
+            </div>
+        </section>
+
+        <section class="grid-kpis">
+            <div class="kpi-card">
+                <h3>Taux d’occupation chambres</h3>
+                <canvas id="occupationChambres"></canvas>
+            </div>
+            <div class="kpi-card">
+                <h3>Taux d’occupation coworking</h3>
+                <canvas id="occupationCoworking"></canvas>
+            </div>
+            <div class="kpi-card">
+                <h3>Rentabilité annuelle</h3>
+                <canvas id="rentabilite"></canvas>
+            </div>
+            <div class="kpi-card">
+                <h3>Production solaire (kWh)</h3>
+                <canvas id="productionSolaire"></canvas>
+            </div>
+            <div class="kpi-card">
+                <h3>Gobelets évités</h3>
+                <canvas id="gobelets"></canvas>
+            </div>
+            <div class="kpi-card">
+                <h3>Potager rooftop (kg légumes/an)</h3>
+                <canvas id="legumes"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
