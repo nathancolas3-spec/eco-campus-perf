@@ -27,99 +27,52 @@
             <h1>L'impact du Campus en un coup d’œil</h1>
             <p class="subtitle">Performances environnementales, sociales et économiques en temps réel.</p>
            
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-value" data-target="1.2">0</div>
-                    <div class="kpi-label">Tonnes de CO₂ évitées</div>
+            <div id="accueil-content">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-value" data-target="1.2">0</div>
+                        <div class="kpi-label">Tonnes de CO₂ évitées</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" data-target="85">0</div>
+                        <div class="kpi-label">% d'Énergie Verte Utilisée</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" data-target="95">0</div>
+                        <div class="kpi-label">% Taux d'Occupation</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" data-target="12">0</div>
+                        <div class="kpi-label">% Rentabilité Annuelle</div>
+                    </div>
                 </div>
-                <div class="kpi-card">
-                    <div class="kpi-value" data-target="85">0</div>
-                    <div class="kpi-label">% d'Énergie Verte Utilisée</div>
+   
+                <div class="chart-container-large">
+                    <h2>Répartition de notre Impact Positif</h2>
+                    <canvas id="impactDonutChart"></canvas>
                 </div>
-                <div class="kpi-card">
-                    <div class="kpi-value" data-target="95">0</div>
-                    <div class="kpi-label">% Taux d'Occupation</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-value" data-target="12">0</div>
-                    <div class="kpi-label">% Rentabilité Annuelle</div>
-                </div>
-            </div>
-
-            <div class="chart-container-large">
-                <h2>Répartition de notre Impact Positif</h2>
-                <canvas id="impactDonutChart"></canvas>
-            </div>
-           
-            <div class="simulator-card">
-                <h2>Simulateur de Rentabilité Verte</h2>
-                <p>Estimez l'impact si le concept était étendu à plusieurs villes.</p>
-                <div class="simulator-controls">
-                    <label for="city-slider">Nombre de villes : <span id="city-count">1</span></label>
-                    <input type="range" id="city-slider" min="1" max="10" value="1">
-                </div>
-                <div class="simulator-results">
-                    <div>CO₂ évité / an : <strong id="sim-co2">1.2 T</strong></div>
-                    <div>Étudiants logés : <strong id="sim-students">250</strong></div>
+               
+                <div class="simulator-card">
+                    <h2>Simulateur de Rentabilité Verte</h2>
+                    <p>Estimez l'impact si le concept était étendu à plusieurs villes.</p>
+                    <div class="simulator-controls">
+                        <label for="city-slider">Nombre de villes : <span id="city-count">1</span></label>
+                        <input type="range" id="city-slider" min="1" max="10" value="1">
+                    </div>
+                    <div class="simulator-results">
+                        <div>CO₂ évité / an : <strong id="sim-co2">1.2 T</strong></div>
+                        <div>Étudiants logés : <strong id="sim-students">250</strong></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="indicateurs" class="page">
-            <h1>Indicateurs Détaillés (RSE)</h1>
-            <p class="subtitle">Analysez nos données de performance sur l'année écoulée.</p>
-            <button id="download-report">Télécharger le rapport PDF</button>
-
-            <div id="report-content">
-                <div class="chart-grid">
-                    <div class="chart-container">
-                        <h3>Performance Énergétique (kWh)</h3>
-                        <canvas id="energyLineChart"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h3>Satisfaction des Étudiants (%)</h3>
-                        <canvas id="satisfactionBarChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart-container-large">
-                    <h3>Indicateurs Économiques (€)</h3>
-                    <canvas id="economicBarChart"></canvas>
-                </div>
-            </div>
-        </section>
+            </section>
 
         <section id="engagements" class="page">
-            <h1>Nos Engagements Durables</h1>
-            <p class="subtitle">Découvrez les piliers de notre démarche éco-responsable.</p>
-            <div class="engagements-grid">
-                <div class="engagement-card">
-                    <div class="icon">🌱</div>
-                    <h3>Matériaux Biosourcés</h3>
-                    <p>Nos bâtiments sont construits avec du bois local et une isolation en fibre de paille pour une empreinte carbone minimale.</p>
-                </div>
-                <div class="engagement-card">
-                    <div class="icon">♻️</div>
-                    <h3>Économie Circulaire</h3>
-                    <p>Un taux de recyclage de 90% des déchets et des partenariats avec des ressourceries locales pour le mobilier.</p>
-                </div>
-                <div class="engagement-card">
-                    <div class="icon">☀️</div>
-                    <h3>Énergie Positive</h3>
-                    <p>Grâce à nos panneaux solaires et à la géothermie, nous produisons plus d'énergie que nous n'en consommons.</p>
-                </div>
-            </div>
-            <h2>Parole d'étudiants</h2>
-            <div class="testimonials">
-                <blockquote>"Vivre ici, c'est plus qu'un logement. C'est participer à un vrai projet qui a du sens. Le potager sur le toit est incroyable !"</blockquote>
-                <cite>- Léa, étudiante en biologie</cite>
-            </div>
-        </section>
+            </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-   
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
