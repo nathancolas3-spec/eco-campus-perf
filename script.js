@@ -1,46 +1,65 @@
-// --- Occupation par bâtiment ---
-const occupationCtx = document.getElementById("occupationChart");
-new Chart(occupationCtx, {
-  type: "bar",
-  data: {
-    labels: ["Bât. A", "Bât. B", "Bât. C", "Coworking"],
-    datasets: [{
-      label: "Taux d’occupation (%)",
-      data: [92, 97, 90, 88],
-      backgroundColor: ["#81c784", "#66bb6a", "#43a047", "#388e3c"]
-    }]
-  },
-  options: { responsive: true }
+const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } }
+};
+
+// Occupation chambres
+new Chart(document.getElementById('occupationChambres'), {
+    type: 'bar',
+    data: {
+        labels: ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],
+        datasets: [{ label: 'Chambres %', data: [82,84,85,86,87,88,90,91,89,88,87,86], backgroundColor: '#4CAF50' }]
+    },
+    options: options
 });
 
-// --- Rentabilité mensuelle ---
-const rentabiliteCtx = document.getElementById("rentabiliteChart");
-new Chart(rentabiliteCtx, {
-  type: "line",
-  data: {
-    labels: ["Jan", "Fév", "Mars", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
-    datasets: [{
-      label: "Revenus mensuels (€)",
-      data: [9500, 9600, 9800, 9900, 10000, 10200, 10300, 10200, 10400, 10600, 10750, 11000],
-      borderColor: "#2e7d32",
-      tension: 0.3,
-      fill: true,
-      backgroundColor: "rgba(46, 125, 50, 0.1)"
-    }]
-  },
-  options: { responsive: true }
+// Occupation coworking
+new Chart(document.getElementById('occupationCoworking'), {
+    type: 'line',
+    data: {
+        labels: ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],
+        datasets: [{ label: 'Coworking %', data: [70,72,73,74,75,76,78,79,77,76,75,74], borderColor: '#2c5f49', fill: true, backgroundColor: 'rgba(76,175,80,0.2)' }]
+    },
+    options: options
 });
 
-// --- Énergie générée ---
-const energieCtx = document.getElementById("energieChart");
-new Chart(energieCtx, {
-  type: "doughnut",
-  data: {
-    labels: ["Panneaux solaires", "Pompes à chaleur", "Économie d'isolation"],
-    datasets: [{
-      data: [4800, 1200, 800],
-      backgroundColor: ["#81c784", "#a5d6a7", "#c8e6c9"]
-    }]
-  },
-  options: { responsive: true }
+// Rentabilité annuelle
+new Chart(document.getElementById('rentabilite'), {
+    type: 'line',
+    data: {
+        labels: ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],
+        datasets: [{ label: 'Revenus €', data: [11000,11500,11800,12000,12500,13000,13500,14000,13800,14200,14500,14200], borderColor: '#FFA500', fill: false }]
+    },
+    options: options
+});
+
+// Production solaire
+new Chart(document.getElementById('productionSolaire'), {
+    type: 'bar',
+    data: {
+        labels: ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],
+        datasets: [{ label: 'kWh', data: [500,600,700,800,900,1000,1200,1300,1100,1000,800,600], backgroundColor: '#FFD700' }]
+    },
+    options: options
+});
+
+// Gobelets évités
+new Chart(document.getElementById('gobelets'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Économisés','Utilisés'],
+        datasets: [{ data: [25000,5000], backgroundColor: ['#4CAF50','#C0C0C0'] }]
+    },
+    options: options
+});
+
+// Potager rooftop
+new Chart(document.getElementById('legumes'), {
+    type: 'bar',
+    data: {
+        labels: ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'],
+        datasets: [{ label: 'kg légumes', data: [20,30,35,40,50,60,80,100,90,70,50,30], backgroundColor: '#8BC34A' }]
+    },
+    options: options
 });
